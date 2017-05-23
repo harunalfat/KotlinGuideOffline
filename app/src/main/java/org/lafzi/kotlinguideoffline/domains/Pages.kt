@@ -5,10 +5,10 @@ import android.provider.BaseColumns
 /**
  * Created by alfat on 20/05/17.
  */
-class Pages(title: String, content: String){
+class Pages(title: String, content: String) {
     companion object {
+        const val _ID = BaseColumns._ID
         const val TABLE_NAME = "pages"
-        const val COLUMN_ID = "id"
         const val COLUMN_TITLE = "title"
         const val COLUMN_CONTENT = "content"
     }

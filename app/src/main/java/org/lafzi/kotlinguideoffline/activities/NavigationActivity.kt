@@ -10,10 +10,8 @@ import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.webkit.WebView
-import org.commonmark.node.Node
-import org.commonmark.parser.Parser
-import org.commonmark.renderer.html.HtmlRenderer
 import org.lafzi.kotlinguideoffline.R
+import org.lafzi.kotlinguideoffline.tasks.RenderMarkdownTask
 
 class NavigationActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -70,13 +68,14 @@ class NavigationActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
         val id = item.itemId
         when (id) {
             R.id.basic_syntax_menu_item -> {
-                val node: Node = Parser.builder().build().parse("# Basic Types\n\nbasic")
-                _webView!!.loadData(HtmlRenderer.builder().build().render(node), "text/html", "UTF-8")
+                RenderMarkdownTask(_webView, "basic-syntax.md").execute()
             }
+
         }
 
         val drawer = findViewById(R.id.drawer_layout) as DrawerLayout
         drawer.closeDrawer(GravityCompat.START)
         return true
     }
+
 }

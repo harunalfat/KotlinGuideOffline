@@ -1,19 +1,18 @@
 package org.lafzi.kotlinguideoffline.databases
 
-import android.content.Context
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper
+import org.lafzi.kotlinguideoffline.KotlinGuideApplication
 
 /**
  * Created by alfat on 20/05/17.
  */
 
-class DBHelper(context: Context) : SQLiteAssetHelper(context, DB_NAME, null, VERSION) {
-    companion object {
-        const val DB_NAME = "kotlin_guide_offline.db"
-        const val VERSION = 1
-    }
-
-    init {
-        setForcedUpgrade()
-    }
+object DBHelper {
+    val DB_NAME = "kotlin_guide_offline.db"
+    val VERSION = 1
+    val instance: SQLiteAssetHelper = SQLiteAssetHelper(
+            KotlinGuideApplication.getKotlinGuideContext(),
+            DB_NAME,
+            null,
+            VERSION)
 }
