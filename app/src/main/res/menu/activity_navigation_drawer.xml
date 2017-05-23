@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/getting_started">
+        <menu>
+            <item android:id="@+id/basic_syntax_menu_item"
+                android:title="@string/basic_syntax"/>
+            <item android:id="@+id/idioms_menu_item"
+                android:title="@string/idioms"/>
+            <item android:id="@+id/coding_conventions_menu_item"
+                android:title="@string/coding_conventions"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/basics">
+        <menu>
+            <item android:id="@+id/basic_types_menu_item"
+                android:title="@string/basic_types"/>
+            <item android:id="@+id/packages_menu_item"
+                android:title="@string/packages"/>
+            <item android:id="@+id/control_flow_menu_item"
+                android:title="@string/control_flow"/>
+            <item android:id="@+id/returns_and_jumps_menu_item"
+                android:title="@string/returns_and_jumps"/>
+        </menu>
+    </item>
+</menu>

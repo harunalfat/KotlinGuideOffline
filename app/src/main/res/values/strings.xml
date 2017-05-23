@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Kotlin Guide Offline</string>
+    <string name="splash_text">Splash Text</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="getting_started">GETTING STARTED</string>
+    <string name="basic_syntax">Basic Syntax</string>
+    <string name="idioms">Idioms</string>
+    <string name="coding_conventions">Coding Conventions</string>
+
+    <string name="basics">BASICS</string>
+    <string name="basic_types">Basic Types</string>
+    <string name="packages">packages</string>
+    <string name="control_flow">Control Flow</string>
+    <string name="returns_and_jumps">Returns and Jumps</string>
+    
+    <string name="action_settings">Settings</string>
+</resources>
