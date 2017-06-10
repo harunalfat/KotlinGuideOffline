@@ -3,25 +3,132 @@
 
     <item android:title="@string/getting_started">
         <menu>
-            <item android:id="@+id/basic_syntax_menu_item"
+            <item android:id="@+id/basic_syntax"
                 android:title="@string/basic_syntax"/>
-            <item android:id="@+id/idioms_menu_item"
+
+            <item android:id="@+id/idioms"
                 android:title="@string/idioms"/>
-            <item android:id="@+id/coding_conventions_menu_item"
+
+            <item android:id="@+id/coding_conventions"
                 android:title="@string/coding_conventions"/>
         </menu>
     </item>
 
     <item android:title="@string/basics">
         <menu>
-            <item android:id="@+id/basic_types_menu_item"
+            <item android:id="@+id/basic_types"
                 android:title="@string/basic_types"/>
-            <item android:id="@+id/packages_menu_item"
+
+            <item android:id="@+id/packages"
                 android:title="@string/packages"/>
-            <item android:id="@+id/control_flow_menu_item"
+
+            <item android:id="@+id/control_flow"
                 android:title="@string/control_flow"/>
-            <item android:id="@+id/returns_and_jumps_menu_item"
+
+            <item android:id="@+id/returns_and_jumps"
                 android:title="@string/returns_and_jumps"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/classes_and_objects">
+        <menu>
+            <item android:id="@+id/classes_and_inheritance"
+                android:title="@string/classes_and_inheritance"/>
+
+            <item android:id="@+id/properties_and_fields"
+                android:title="@string/properties_and_fields"/>
+
+            <item android:id="@+id/interfaces"
+                android:title="@string/interfaces"/>
+
+            <item android:id="@+id/visibility_modifiers"
+                android:title="@string/visibility_modifiers"/>
+
+            <item android:id="@+id/extensions"
+                android:title="@string/extensions"/>
+
+            <item android:id="@+id/data_classes"
+                android:title="@string/data_classes"/>
+
+            <item android:id="@+id/sealed_classes"
+                android:title="@string/sealed_classes"/>
+
+            <item android:id="@+id/generics"
+                android:title="@string/generics"/>
+
+            <item android:id="@+id/nested_classes"
+                android:title="@string/nested_classes"/>
+
+            <item android:id="@+id/enum_classes"
+                android:title="@string/enum_classes"/>
+
+            <item android:id="@+id/objects"
+                android:title="@string/objects"/>
+
+            <item android:id="@+id/delegation"
+                android:title="@string/delegation"/>
+
+            <item android:id="@+id/delegated_properties"
+                android:title="@string/delegated_properties"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/functions_and_lambdas">
+        <menu>
+            <item android:id="@+id/functions"
+                android:title="@string/functions"/>
+
+            <item android:id="@+id/lambdas"
+                android:title="@string/lambdas"/>
+
+            <item android:id="@+id/inline_functions"
+                android:title="@string/inline_functions"/>
+
+            <item android:id="@+id/coroutines"
+                android:title="@string/coroutines"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/other">
+        <menu>
+            <item android:id="@+id/destructuring_declarations"
+                android:title="@string/destructuring_declarations"/>
+
+            <item android:id="@+id/collections"
+                android:title="@string/collections"/>
+
+            <item android:id="@+id/ranges"
+                android:title="@string/ranges"/>
+
+            <item android:id="@+id/type_checks_and_casts"
+                android:title="@string/type_checks_and_casts"/>
+
+            <item android:id="@+id/this_expressions"
+                android:title="@string/this_expressions"/>
+
+            <item android:id="@+id/equality"
+                android:title="@string/equality"/>
+
+            <item android:id="@+id/operator_overloading"
+                android:title="@string/operator_overloading"/>
+
+            <item android:id="@+id/null_safety"
+                android:title="@string/null_safety"/>
+
+            <item android:id="@+id/exceptions"
+                android:title="@string/exceptions"/>
+
+            <item android:id="@+id/annotations"
+                android:title="@string/annotations"/>
+
+            <item android:id="@+id/reflection"
+                android:title="@string/reflection"/>
+
+            <item android:id="@+id/type_safe_builders"
+                android:title="@string/type_safe_builders"/>
+
+            <item android:id="@+id/type_aliases"
+                android:title="@string/type_aliases"/>
         </menu>
     </item>
 </menu>

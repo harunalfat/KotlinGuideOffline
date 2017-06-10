@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import org.lafzi.kotlinguideoffline.R
+import org.lafzi.kotlinguideoffline.databases.DBHelper
 
 class SplashActivity : AppCompatActivity() {
 
@@ -15,6 +16,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        DBHelper.instance.readableDatabase
         openMainActivity()
     }
 

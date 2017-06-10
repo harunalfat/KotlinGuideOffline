@@ -1,4 +1,5 @@
 import os
+import re
 import sqlite3
 import subprocess
 
@@ -27,8 +28,15 @@ def list_and_save_files(folder_name):
     for file_dir in files:
         file = open('resources/pages/docs/' + folder_name + '/' + file_dir, 'r')
         contents = ''
-        for line in file:
-            contents = contents + line
+        hyphen_counter = 0
+        start_line = 0
+        for index, line in enumerate(file):
+            if line == '---\n':
+                hyphen_counter = hyphen_counter + 1
+                start_line = index
+            if hyphen_counter == 2 and index > start_line:
+                line = re.sub(r"\[([\s\S]+)\]\([\s\S]+\)", r"**\1**", line)
+                contents = contents + line
         insert_to_pages(conn, file_dir, contents)
 
 
@@ -41,7 +49,7 @@ if not os.path.exists('resources'):
     subprocess.call('echo "pages/docs/" >> resources/.git/info/sparse-checkout', shell=True)
 
 subprocess.check_call(['git', '-C', 'resources', 'pull', 'origin', 'master'])
-conn = sqlite3.connect('src/main/assets/database/kotlin_guide_offline.db')
+conn = sqlite3.connect('src/main/assets/databases/kotlin_guide_offline.db')
 create_pages_table(conn)
 list_and_save_files('reference')
 conn.commit()

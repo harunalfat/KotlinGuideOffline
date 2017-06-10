@@ -9,11 +9,23 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:title="@string/kotlin_guide"
+        app:titleTextColor="@color/white"/>
 
-    <WebView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/content_web_view"
+    <br.tiagohm.markdownview.MarkdownView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/content_markdown_view"
+        app:escapeHtml="false"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_below="@id/toolbar"/>
+        android:layout_below="@id/toolbar"
+        android:visibility="gone"/>
+
+    <ExpandableListView
+        android:id="@+id/expandable_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:divider="@android:color/black"
+        android:dividerHeight="0.5dp"/>
 </RelativeLayout>
